@@ -14,6 +14,9 @@
 		3F42D22828408B83008AB69F /* G_HoliyayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D22728408B83008AB69F /* G_HoliyayTests.swift */; };
 		3F42D23228408B83008AB69F /* G_HoliyayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D23128408B83008AB69F /* G_HoliyayUITests.swift */; };
 		3F42D23428408B83008AB69F /* G_HoliyayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D23328408B83008AB69F /* G_HoliyayUITestsLaunchTests.swift */; };
+		3F42D24728409D15008AB69F /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D24628409D15008AB69F /* ExploreView.swift */; };
+		3F42D24A2840A0EE008AB69F /* Bookmarkview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42D2492840A0EE008AB69F /* Bookmarkview.swift */; };
+		3F7A7EA72840A1D0002D7F3A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A7EA62840A1D0002D7F3A /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		3F42D22D28408B83008AB69F /* G-HoliyayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "G-HoliyayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F42D23128408B83008AB69F /* G_HoliyayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_HoliyayUITests.swift; sourceTree = "<group>"; };
 		3F42D23328408B83008AB69F /* G_HoliyayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_HoliyayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F42D24628409D15008AB69F /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		3F42D2492840A0EE008AB69F /* Bookmarkview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmarkview.swift; sourceTree = "<group>"; };
+		3F7A7EA62840A1D0002D7F3A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				3F42D21628408B81008AB69F /* G_HoliyayApp.swift */,
-				3F42D21828408B81008AB69F /* ContentView.swift */,
+				3F42D240284098FE008AB69F /* Views */,
 				3F42D21A28408B83008AB69F /* Assets.xcassets */,
 				3F42D21C28408B83008AB69F /* Preview Content */,
 			);
@@ -125,6 +131,41 @@
 				3F42D23328408B83008AB69F /* G_HoliyayUITestsLaunchTests.swift */,
 			);
 			path = "G-HoliyayUITests";
+			sourceTree = "<group>";
+		};
+		3F42D240284098FE008AB69F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F7A7EA52840A1BC002D7F3A /* Profile */,
+				3F42D2482840A0BF008AB69F /* Bookmark */,
+				3F42D24528409CDC008AB69F /* Explore */,
+				3F42D21828408B81008AB69F /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3F42D24528409CDC008AB69F /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				3F42D24628409D15008AB69F /* ExploreView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		3F42D2482840A0BF008AB69F /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				3F42D2492840A0EE008AB69F /* Bookmarkview.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		3F7A7EA52840A1BC002D7F3A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3F7A7EA62840A1D0002D7F3A /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F42D21928408B81008AB69F /* ContentView.swift in Sources */,
+				3F7A7EA72840A1D0002D7F3A /* ProfileView.swift in Sources */,
+				3F42D24728409D15008AB69F /* ExploreView.swift in Sources */,
+				3F42D24A2840A0EE008AB69F /* Bookmarkview.swift in Sources */,
 				3F42D21728408B81008AB69F /* G_HoliyayApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
