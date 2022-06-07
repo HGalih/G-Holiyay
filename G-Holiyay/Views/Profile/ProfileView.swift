@@ -8,13 +8,40 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var data: DataSet
+    @State private var showingProfile = false
+    
     var body: some View {
-        Text("Hello, Profile!")
+        
+        NavigationView {
+            ZStack{
+            Color.black.ignoresSafeArea()
+            VStack {
+                Text("")
+                    .toolbar {
+                        ToolbarItemGroup(placement: .navigationBarTrailing) {
+                            Button {
+                                showingProfile.toggle()
+                            } label: {
+                                Label("Edit Profile", systemImage: "pencil")
+                            }
+                            }
+                        }
+                    }
+                    .sheet(isPresented: $showingProfile) {
+                        ProfileHost()
+                            .environmentObject(data)
+                    }
+                
+                ProfileDetail(profile: data.profile)
+            }}
+        }
     }
-}
 
-struct Profileview_Previews: PreviewProvider {
+
+struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+            .environmentObject(DataSet())
     }
 }

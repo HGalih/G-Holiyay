@@ -15,9 +15,10 @@ struct splashscreen: View {
            }
        }
     var body: some View {
+        
         if(isActive == true){
             ContentView()
-        }
+        }else{
         ZStack{
             Color.black
                 .ignoresSafeArea()
@@ -36,7 +37,10 @@ struct splashscreen: View {
         }
     }}
 struct splashscreen_Previews: PreviewProvider {
+
     static var previews: some View {
         splashscreen()
+            
     }
+}
 }

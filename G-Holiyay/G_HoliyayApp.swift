@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct G_HoliyayApp: App {
+    @StateObject private var data = DataSet()
     var body: some Scene {
         WindowGroup {
             splashscreen()
+                .environmentObject(data)
         }
     }
 }

@@ -19,32 +19,52 @@ struct ContentView: View {
         case bookmark
         case profile
     }
-    
     var body: some View {
-        TabView(selection: $pilihan) {
-            ExploreView()
-                .tabItem {
-                    Label("Explore", systemImage: "globe")
-                }
-                .tag(Tab.explore)
+     
+        ZStack{
+            Color.black.ignoresSafeArea()
+            TabView(selection: $pilihan) {
+                ExploreView()
+                    .tabItem {
+                        Label("Explore", systemImage: "globe")
+                    }
+                    .tag(Tab.explore)
+                
+                Bookmarkview()
+                    .tabItem {
+                        Label("Bookmark", systemImage: "bookmark")
+                    }
+                    .tag(Tab.bookmark)
+                
+                ProfileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person")
+                    }
+                    .tag(Tab.profile)
+            }
             
-            BookmarkView()
-                .tabItem {
-                    Label("Bookmark", systemImage: "bookmark")
-                }
-                .tag(Tab.bookmark)
-            
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person")
-                }
-                .tag(Tab.bookmark)
+
         }
+
         }
+        
     }
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView()
+            ContentView().preferredColorScheme(.light)
+                .environmentObject(DataSet())
         }
     }
+
+struct PrimaryButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration
+            .label
+            .padding()
+            .background(Color("mainBlue"))
+            .foregroundColor(.white)
+            .font(.body.bold())
+            .cornerRadius(8)
+    }
+}
