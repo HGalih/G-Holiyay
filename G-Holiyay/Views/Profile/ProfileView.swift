@@ -14,12 +14,10 @@ struct ProfileView: View {
     var body: some View {
         
         NavigationView {
-            ZStack{
-            Color.black.ignoresSafeArea()
             VStack {
                 Text("")
                     .toolbar {
-                        ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        ToolbarItem() {
                             Button {
                                 showingProfile.toggle()
                             } label: {
@@ -34,7 +32,7 @@ struct ProfileView: View {
                     }
                 
                 ProfileDetail(profile: data.profile)
-            }}
+            }
         }
     }
 

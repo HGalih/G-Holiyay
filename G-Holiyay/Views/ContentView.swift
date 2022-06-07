@@ -21,8 +21,8 @@ struct ContentView: View {
     }
     var body: some View {
      
-        ZStack{
-            Color.black.ignoresSafeArea()
+       
+            
             TabView(selection: $pilihan) {
                 ExploreView()
                     .tabItem {
@@ -43,8 +43,8 @@ struct ContentView: View {
                     .tag(Tab.profile)
             }
             
-
-        }
+            .preferredColorScheme(.dark)
+        
 
         }
         
@@ -52,7 +52,7 @@ struct ContentView: View {
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView().preferredColorScheme(.light)
+            ContentView().preferredColorScheme(.dark)
                 .environmentObject(DataSet())
         }
     }

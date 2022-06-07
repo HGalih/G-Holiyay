@@ -95,7 +95,7 @@ struct CalendarView: View {
         }
         .padding()
        
-            Color.black.ignoresSafeArea()
+//            Color.black.ignoresSafeArea()
         
         VStack {
             
@@ -125,7 +125,6 @@ struct CalendarView: View {
             .padding(.horizontal)
             .foregroundColor(.white)
             .padding()
-            .background(.white)
             
             Button {
                 presentationMode.wrappedValue.dismiss()
